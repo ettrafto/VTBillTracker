@@ -1,0 +1,179 @@
+/* Card styles */
+.card {
+    width: 60rem;
+    background-color: #fff; /* Clean white background */
+    padding: 2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    margin: 2rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+    overflow: hidden; /* Ensure content overflow is hidden during collapse */
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.card h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.content {
+    overflow: hidden; /* Ensures smooth height transitions */
+}
+
+/* Top container with flex for alignment */
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.bill-num {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+.date-intro{
+    padding: .5rem 1rem 0rem 1rem;
+}
+
+.date-intro {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.link{
+    transform: none;
+    transform-origin: 50% 50% 0px;
+    margin-left:auto;
+}
+/* Link styling */
+.link a {
+    color: white;
+    font-weight: bold;
+    transform: none;
+}
+
+.link a:visited{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* Sponsors and actions */
+.sponsors, .actions {
+    margin-top: 16px;
+}
+
+.sponsors h4, .actions h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.sponsors ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sponsors li {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Table styles for actions */
+.actions table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.actions th, .actions td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.actions th {
+    background-color: #f8f8f8;
+    font-size: 14px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center;
+    gap: 10px; /* Adds space between buttons */
+    margin-top: 1rem;
+}
+
+.btn-container button {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #0093FF 0%, #005CFF 100%);
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.btn-container button:hover {
+    background: linear-gradient(90deg, #005CFF 0%, #003B99 100%);
+}
+
+button {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #0093FF 0%, #005CFF 100%);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #005CFF 0%, #003B99 100%);
+}
+
+/* Sorting option buttons */
+.sort-option {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.sort-option:hover {
+    background-color: #e0e0e0;
+}
