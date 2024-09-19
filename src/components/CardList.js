@@ -4,7 +4,7 @@ import "./CardList.css"
 
 import Card from "./Card";
 import { LayoutGroup } from "framer-motion";
-import data from './data.json'; // Assuming your data is correctly imported from the JSON file
+import data from '../../backend/bills_data.json'; 
 
 const CardList = () => {
   const [sortOption, setSortOption] = useState('bill_number_asc');
