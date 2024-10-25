@@ -1,14 +1,31 @@
-
-.title{
+.title {
     font-size: 2rem;
+    text-align: center;
 }
+
 /* Sorting and filter options container */
-.sorting-parent  {
+.sorting-parent {
     display: flex;
     justify-content: center; /* Center the buttons horizontally */
     align-items: center; /* Align the buttons vertically */
     gap: 10px; /* Adds space between the buttons */
     margin-bottom: 16px; /* Space below the button groups */
+}
+
+/* Dark mode styling */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: #333;
+    color: #ffffff;
 }
 
 /* General button styles */
@@ -35,17 +52,77 @@ button:hover {
     padding: 1.5rem;
     z-index: 1;
     margin-top: 10px;
-    margin:auto;
-    width:40rem;
-
+    margin: auto;
+    width: 40rem;
     background-color: #fff; /* Clean white background */
     border-radius: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-
 }
 
-.cards{
-    display:flex;
+.cards {
+    display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.cards {
+    display: grid;
+    gap: 16px;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: start; /* Align the items at the top (if needed) */
+    margin: auto; /* Ensure the grid is centered within its container */
+    width: 100%; /* Take full width of the parent */
+}
+
+.cards-3 {
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    gap: 2em;
+}
+
+.cards-3 .card {
+    width: 100%; /* Cards take full width of their grid cell */
+}
+
+.cards-2 {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    gap: 2em;
+}
+
+.cards-2 .card {
+    width: 100%;
+}
+
+.cards-1 {
+    grid-template-columns: 1fr;
+    width: 80%;
+    gap: 2em;
+}
+
+.cards-1 .card {
+    width: 100%;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%; /* Take the full width of the grid cell */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Optional hover effect */
+}
+
+/* Dark mode button hover effect */
+.dark-mode button {
+    background: linear-gradient(90deg, #555 0%, #333 100%);
+}
+
+.dark-mode button:hover {
+    background: linear-gradient(90deg, #333 0%, #111 100%);
 }

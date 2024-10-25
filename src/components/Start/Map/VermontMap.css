@@ -1,0 +1,15 @@
+svg {
+  border: 1px solid #ccc;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+.tooltip {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  pointer-events: none; /* Ensure it doesn't interfere with interactions */
+  z-index: 10; /* Make sure it's above the map */
+}
+
