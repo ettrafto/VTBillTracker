@@ -7,6 +7,7 @@ const StartScreen = () => {
   const [selectedDistricts, setSelectedDistricts] = useState([]);
   const navigate = useNavigate();
 
+
   const handleDistrictSelection = (district) => {
     // Add or remove districts from selectedDistricts state
     if (selectedDistricts.includes(district)) {

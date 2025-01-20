@@ -1,11 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 
+import './VermontMap.css';
+import { RepData } from '../../../util/RepData';
+import { SenatorData } from '../../../util/SenatorData';
+import { townToDistrict } from '../../../util/townToDistrict';
+
+
 const Map = () => {
   const svgRef = useRef();
   const [districtsData, setDistrictsData] = useState();
   const [townDistrictsData, setTownDistrictsData] = useState([]);
   const [selectedDistricts, setSelectedDistricts] = useState([]);
+  const [selectedSenateDistricts, setSelectedSenateDistricts] = useState([]);
+  const [selectedTowns, setSelectedTowns] = useState([]);
   const [tooltipContent, setTooltipContent] = useState(''); // Tooltip content
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 }); // Tooltip position
   const [tooltipVisible, setTooltipVisible] = useState(false); // Tooltip visibility
@@ -43,87 +51,153 @@ const Map = () => {
 
     const path = d3.geoPath().projection(projection);
 
+
     // Draw town districts (background layer)
     svg.selectAll('path.town')
       .data(townDistrictsData.features)
       .join('path')
       .attr('class', 'town')
       .attr('d', path)
-      .attr('stroke', '#000')
-      .attr('fill', 'none')  // No fill, only outline for towns
+      .attr('stroke', 'gray')
+      .attr('fill', '#000fff00')  
       .attr('stroke-width', 1)
       .on('mouseover', function (event, d) {
         console.log("Mouseover event fired for: ", d.properties.TOWNNAMEMC); // Debugging
-        // Show tooltip and update with the town name
-        setTooltipContent(d.properties.TOWNNAMEMC);  // Assuming the town name is stored in 'name'
+        setTooltipContent(d.properties.TOWNNAMEMC);  // Show town name in tooltip
         setTooltipVisible(true);
       })
       .on('mousemove', function (event) {
         console.log("Mousemove event fired at: ", event.pageX, event.pageY); // Debugging
-        // Move tooltip with the mouse
-        setTooltipPosition({ x: event.pageX, y: event.pageY });
+        // Adjust the position of the tooltip with the mouse movement
+        setTooltipPosition({
+          x: event.pageX, 
+          y: event.pageY
+        });
       })
       .on('mouseout', function () {
         console.log("Mouseout event fired"); // Debugging
-        // Hide tooltip when not hovering
         setTooltipVisible(false);
       });
 
-    // Draw state districts (foreground layer)
-    svg.selectAll('path.district')
-      .data(districtsData.features)
-      .join('path')
-      .attr('class', 'district')
-      .attr('d', path)
-      .attr('stroke', '#000')  // Black stroke for state districts
-      .attr('fill', d => selectedDistricts.includes(d.properties.name) ? '#FFA50099' : '#FFFFFF99')  // Translucent fill
-      .on('click', function (event, d) {
-        const districtName = d.properties.name;
-        setSelectedDistricts(prevSelected => {
-          if (prevSelected.includes(districtName)) {
-            return prevSelected.filter(item => item !== districtName);
-          } else {
-            return [...prevSelected, districtName];
-          }
-        });
-      })
-      .on('mouseover', function (event, d) {
-        if (!selectedDistricts.includes(d.properties.name)) {
-          d3.select(this).attr('fill', '#ADD8E699');  // Light blue on hover
-        }
-      })
-      .on('mouseout', function (event, d) {
-        if (!selectedDistricts.includes(d.properties.name)) {
-          d3.select(this).attr('fill', '#FFFFFF99');  // Revert to translucent white
+  // Draw state districts (foreground layer)
+  svg.selectAll('path.district')
+    .data(districtsData.features)
+    .join('path')
+    .attr('class', 'district')
+    .attr('d', path)
+    .attr('stroke', '#000')  // Black stroke for state districts
+    .attr('fill', d => selectedDistricts.includes(d.properties.name) ? '#FFA50099' : '#FFFFFF99')  // Translucent fill
+    .on('click', function (event, d) {
+      const districtName = d.properties.name;
+      setSelectedDistricts(prevSelected => {
+        if (prevSelected.includes(districtName)) {
+          return prevSelected.filter(item => item !== districtName);
+        } else {
+          return [...prevSelected, districtName];
         }
       });
+    })
+    .on('mouseover', function (event, d) {
+      if (!selectedDistricts.includes(d.properties.name)) {
+        d3.select(this).attr('fill', '#ADD8E699');  // Light blue on hover
+      }
+    })
+    .on('mouseout', function (event, d) {
+      if (!selectedDistricts.includes(d.properties.name)) {
+        d3.select(this).attr('fill', '#FFFFFF99');  // Revert to translucent white
+      }
+    });
 
   }, [districtsData, townDistrictsData, selectedDistricts]);
+
+//helper function to update selected towns and senate districts based on selected districts
+useEffect(() => {
+  const updateSelectedTowns = () => {
+    const townsSet = new Set();
+
+    // Loop through selected districts and collect towns
+    selectedDistricts.forEach((district) => {
+      RepData.filter((rep) => rep[0] === district).forEach((rep) => {
+        rep[2].forEach((town) => townsSet.add(town));
+      });
+    });
+
+    // Update the state with the unique towns
+    setSelectedTowns(Array.from(townsSet));
+  };
+
+  updateSelectedTowns(); // Call the function to update selectedTowns
+}, [selectedDistricts, RepData]);
+
+useEffect(() => {
+  const updateSelectedSenatorDistricts = () => {
+    const districtSet = new Set();
+
+    // Loop through selected towns and collect senator districts
+    selectedTowns.forEach((town) => {
+      townToDistrict
+        .filter(([townName]) => townName === town)
+        .forEach(([, district]) => districtSet.add(district));
+    });
+
+    // Update the state with the unique senator districts
+    setSelectedSenateDistricts(Array.from(districtSet));
+  };
+
+  updateSelectedSenatorDistricts(); // Call the function to update selectedSenatorDistricts
+}, [selectedTowns, townToDistrict]);
+
+
+
 
   return (
     <div style={{ position: 'relative' }}> {/* Ensure container is relative for absolute tooltip positioning */}
       <svg ref={svgRef}></svg>
       {tooltipVisible && (
-        <div
-          className="tooltip"
-          style={{
-            position: 'absolute',
-            top: tooltipPosition.y + 'px',
-            left: tooltipPosition.x + 'px',
-            background: 'white',
-            padding: '5px',
-            borderRadius: '5px',
-            border: '1px solid black',
-            pointerEvents: 'none', // Ensure it doesn't interfere with map interactions
-            zIndex: 10 // Make sure it's above the map
-          }}
-        >
-          {tooltipContent}
-        </div>
+      <div
+        className="tooltip"
+        style={{
+          position: 'absolute',
+          top: tooltipPosition.y + 'px',
+          left: tooltipPosition.x + 'px',
+          background: 'white',
+          padding: '5px',
+          borderRadius: '5px',
+          border: '1px solid black',
+          pointerEvents: 'none', // Ensure it doesn't interfere with map interactions
+          zIndex: 10 // Make sure it's above the map
+        }}
+      >
+        {console.log("Tooltip rendering with content: ", tooltipContent)}
+        {tooltipContent}
+      </div>
       )}
+      
       {selectedDistricts.length > 0 && (
-        <div>
+        <div className='selected-districts'>
           <h2>Selected Districts: {selectedDistricts.join(', ')}</h2>
+
+          <h3>Representatives:</h3>
+          <div>
+            {selectedDistricts.map(element =>
+              RepData.filter(item => item[0] === element).map(rep => (
+                <div key={`${rep[0]}-${rep[1]}`}>
+                  <strong>{rep[1]}</strong> - Towns: {rep[2].join(', ')} - Party: {rep[3]}
+                </div>
+              ))
+            )}
+          </div>
+
+          <h3>Senators:</h3>
+          <div>
+            {selectedSenateDistricts.map((senateDistrict) =>
+              SenatorData.filter((item) => item[0] === senateDistrict).map((senator) => (
+                <div key={`${senator[0]}-${senator[1]}`}>
+                  <strong>{senator[1]}</strong> - District: {senator[0]} - Party: {senator[2]}
+                </div>
+              ))
+            )}
+          </div>
         </div>
       )}
     </div>

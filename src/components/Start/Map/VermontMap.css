@@ -1,3 +1,11 @@
+.district {
+  /*pointer-events: none; /* Disable pointer events */
+}
+
+.town {
+  pointer-events: visiblePainted; /* Keep pointer events active only on town outlines */
+}
+
 svg {
   border: 1px solid #ccc;
 }
