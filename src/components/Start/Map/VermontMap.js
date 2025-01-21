@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
+import { useNavigate } from "react-router-dom";
+
+
 
 import './VermontMap.css';
 import { RepData } from '../../../util/RepData';
@@ -7,12 +10,16 @@ import { SenatorData } from '../../../util/SenatorData';
 import { townToDistrict } from '../../../util/townToDistrict';
 
 
-const Map = () => {
+const Map = ({/*selectedDistricts, setSelectedDistricts, selectedSenateDistricts, setSelectedSenateDistricts*/}) => {
+  const navigate = useNavigate();
+
+  const [selectedDistricts, setSelectedDistricts] = useState([]);
+  const [selectedSenateDistricts, setSelectedSenateDistricts] = useState([]);
+
   const svgRef = useRef();
   const [districtsData, setDistrictsData] = useState();
   const [townDistrictsData, setTownDistrictsData] = useState([]);
-  const [selectedDistricts, setSelectedDistricts] = useState([]);
-  const [selectedSenateDistricts, setSelectedSenateDistricts] = useState([]);
+
   const [selectedTowns, setSelectedTowns] = useState([]);
   const [tooltipContent, setTooltipContent] = useState(''); // Tooltip content
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 }); // Tooltip position
@@ -147,11 +154,27 @@ useEffect(() => {
   updateSelectedSenatorDistricts(); // Call the function to update selectedSenatorDistricts
 }, [selectedTowns, townToDistrict]);
 
+const handleProceed = () => {
+  // Navigate to legislature data screen, passing selected districts as state
+  navigate("/legislature", { state: { selectedDistricts, selectedSenateDistricts } });
+};
 
+console.log("Selected Districts: ", selectedDistricts);
+
+
+  const handleDistrictSelection = (district) => {
+    // Add or remove districts from selectedDistricts state
+    if (selectedDistricts.includes(district)) {
+      setSelectedDistricts(selectedDistricts.filter((d) => d !== district));
+    } else {
+      setSelectedDistricts([...selectedDistricts, district]);
+    }
+  };
 
 
   return (
-    <div style={{ position: 'relative' }}> {/* Ensure container is relative for absolute tooltip positioning */}
+    <div className='selection-container'>
+    <div className='selection-map' > {/* Ensure container is relative for absolute tooltip positioning */}
       <svg ref={svgRef}></svg>
       {tooltipVisible && (
       <div
@@ -172,17 +195,22 @@ useEffect(() => {
         {tooltipContent}
       </div>
       )}
-      
+    </div>
+      <div className='selected-data-container'>
+        <h3 className='selected-data-title'>Selected Districts & Reps</h3>
+      <div className='selected-data'>
       {selectedDistricts.length > 0 && (
         <div className='selected-districts'>
-          <h2>Selected Districts: {selectedDistricts.join(', ')}</h2>
+          <h2>Districts: {selectedDistricts.join(', ')}</h2>
+          <h2>Towns: {selectedTowns.join(', ')}</h2>
+
 
           <h3>Representatives:</h3>
           <div>
             {selectedDistricts.map(element =>
               RepData.filter(item => item[0] === element).map(rep => (
                 <div key={`${rep[0]}-${rep[1]}`}>
-                  <strong>{rep[1]}</strong> - Towns: {rep[2].join(', ')} - Party: {rep[3]}
+                  <strong>{rep[1]}</strong> - Party: {rep[3]}
                 </div>
               ))
             )}
@@ -193,14 +221,20 @@ useEffect(() => {
             {selectedSenateDistricts.map((senateDistrict) =>
               SenatorData.filter((item) => item[0] === senateDistrict).map((senator) => (
                 <div key={`${senator[0]}-${senator[1]}`}>
-                  <strong>{senator[1]}</strong> - District: {senator[0]} - Party: {senator[2]}
+                  <strong>{senator[1]}</strong> - Party: {senator[2]}
                 </div>
               ))
             )}
           </div>
+          <button onClick={handleProceed}>View Legislature Data</button>
+
         </div>
       )}
     </div>
+    </div>
+    </div>
+
+
   );
 };
 
