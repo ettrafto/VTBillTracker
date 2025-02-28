@@ -1,26 +1,38 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useContext } from 'react';
 import * as d3 from 'd3';
 import { useNavigate } from "react-router-dom";
 
 
+import { StateContext } from '../../../util/StateProvider';
 
+import Footer from '../../all/Footer';
 import './VermontMap.css';
 import { RepData } from '../../../util/RepData';
 import { SenatorData } from '../../../util/SenatorData';
 import { townToDistrict } from '../../../util/townToDistrict';
+import TownSelector from '../TownSelector';
+import Modal from '../Modal/Modal';
 
 
-const Map = ({/*selectedDistricts, setSelectedDistricts, selectedSenateDistricts, setSelectedSenateDistricts*/}) => {
+const Map = () => {
   const navigate = useNavigate();
 
-  const [selectedDistricts, setSelectedDistricts] = useState([]);
-  const [selectedSenateDistricts, setSelectedSenateDistricts] = useState([]);
+  const { selectedDistricts,selectedSenateDistricts, setSelectedDistricts, setSelectedSenateDistricts } = useContext(StateContext);
 
   const svgRef = useRef();
+  const [mapZoom, setMapZoom] = useState({
+    center: [-72.577841, 44.0886], // Default center
+    scale: 10000, // Default scale
+  });
+  
   const [districtsData, setDistrictsData] = useState();
   const [townDistrictsData, setTownDistrictsData] = useState([]);
 
   const [selectedTowns, setSelectedTowns] = useState([]);
+  const [TownToolSelection, setTownToolSelection] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+
+
   const [tooltipContent, setTooltipContent] = useState(''); // Tooltip content
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 }); // Tooltip position
   const [tooltipVisible, setTooltipVisible] = useState(false); // Tooltip visibility
@@ -52,8 +64,8 @@ const Map = ({/*selectedDistricts, setSelectedDistricts, selectedSenateDistricts
       .attr('viewBox', `0 0 ${width} ${height}`);
 
     const projection = d3.geoMercator()
-      .center([-72.577841, 44.0886])
-      .scale(10000)
+      .center(mapZoom.center)
+      .scale(mapZoom.scale)
       .translate([width / 2, height / 2]);
 
     const path = d3.geoPath().projection(projection);
@@ -66,8 +78,10 @@ const Map = ({/*selectedDistricts, setSelectedDistricts, selectedSenateDistricts
       .attr('class', 'town')
       .attr('d', path)
       .attr('stroke', 'gray')
-      .attr('fill', '#000fff00')  
-      .attr('stroke-width', 1)
+      .attr('fill', d => {
+        const townName = d.properties.TOWNNAMEMC;
+        return townName === TownToolSelection ? '#ff0000' : '#000fff00';
+      })      .attr('stroke-width', 1)
       .on('mouseover', function (event, d) {
         console.log("Mouseover event fired for: ", d.properties.TOWNNAMEMC); // Debugging
         setTooltipContent(d.properties.TOWNNAMEMC);  // Show town name in tooltip
@@ -115,7 +129,7 @@ const Map = ({/*selectedDistricts, setSelectedDistricts, selectedSenateDistricts
       }
     });
 
-  }, [districtsData, townDistrictsData, selectedDistricts]);
+  }, [districtsData, townDistrictsData, selectedDistricts, mapZoom, TownToolSelection]);
 
 //helper function to update selected towns and senate districts based on selected districts
 useEffect(() => {
@@ -171,71 +185,127 @@ console.log("Selected Districts: ", selectedDistricts);
     }
   };
 
+  const handleView = (view) => {
+    if (view === 'All') {
+      setMapZoom({
+        center: [-72.5041, 43.9746], // Default center
+        scale: 12500, // Default scale
+      });
+    } else if (view === 'Rutland') {
+      setMapZoom({
+        center: [-73.0121, 43.6106], // Center for Rutland
+        scale: 120000, // Adjusted scale for Rutland
+      });
+    } else if (view === 'Burlington') {
+      setMapZoom({
+        center: [-73.1348, 44.4701], // Center for Burlington
+        scale: 120000, // Adjusted scale for Burlington
+      });
+    }
+  };
+
 
   return (
+    <>
     <div className='selection-container'>
-    <div className='selection-map' > {/* Ensure container is relative for absolute tooltip positioning */}
-      <svg ref={svgRef}></svg>
-      {tooltipVisible && (
-      <div
-        className="tooltip"
-        style={{
-          position: 'absolute',
-          top: tooltipPosition.y + 'px',
-          left: tooltipPosition.x + 'px',
-          background: 'white',
-          padding: '5px',
-          borderRadius: '5px',
-          border: '1px solid black',
-          pointerEvents: 'none', // Ensure it doesn't interfere with map interactions
-          zIndex: 10 // Make sure it's above the map
-        }}
-      >
-        {console.log("Tooltip rendering with content: ", tooltipContent)}
-        {tooltipContent}
+      
+      <div className='selection-map' > {/* Ensure container is relative for absolute tooltip positioning */}
+        <svg ref={svgRef}></svg>
+        {/*TOOLTIP*/}
+        <div className='zoom-buttons'>  
+          <img className='view-icon' src="/images/view-icon.svg"/>
+          <button className='view-all' onClick={() => handleView('All')} >View All</button>
+          <button className='view-rutland' onClick={() => handleView('Rutland')}>Rutland</button>
+          <button className='view-burlington' onClick={() => handleView('Burlington')}>Burlington</button>
+        </div>
+        
+        <div/>
       </div>
-      )}
-    </div>
-      <div className='selected-data-container'>
-        <h3 className='selected-data-title'>Selected Districts & Reps</h3>
-      <div className='selected-data'>
-      {selectedDistricts.length > 0 && (
-        <div className='selected-districts'>
-          <h2>Districts: {selectedDistricts.join(', ')}</h2>
-          <h2>Towns: {selectedTowns.join(', ')}</h2>
+      <div className='right-menu'>    
+        <div className='selected-data-container'>
+          
 
+          <div className='selected-data'>
+          {selectedDistricts.length > 0 ? (
 
-          <h3>Representatives:</h3>
-          <div>
-            {selectedDistricts.map(element =>
-              RepData.filter(item => item[0] === element).map(rep => (
-                <div key={`${rep[0]}-${rep[1]}`}>
-                  <strong>{rep[1]}</strong> - Party: {rep[3]}
-                </div>
-              ))
-            )}
-          </div>
+          <h3 className='selected-data-title'>Selected Districts, Towns & Reps</h3>
+          ) : ("")}
 
-          <h3>Senators:</h3>
-          <div>
-            {selectedSenateDistricts.map((senateDistrict) =>
-              SenatorData.filter((item) => item[0] === senateDistrict).map((senator) => (
-                <div key={`${senator[0]}-${senator[1]}`}>
-                  <strong>{senator[1]}</strong> - Party: {senator[2]}
-                </div>
-              ))
-            )}
-          </div>
-          <button onClick={handleProceed}>View Legislature Data</button>
+          {selectedDistricts.length > 0 ? (
+            <div className='selected-districts'>
+              <h2>Districts: {selectedDistricts.join(', ')}</h2>
+              <h2>Towns: {selectedTowns.join(', ')}</h2>
+
+              <hr />
+
+              <h3>Representatives:</h3>
+              <div>
+                {selectedDistricts.map(element =>
+                  RepData.filter(item => item[0] === element).map(rep => (
+                    <div key={`${rep[0]}-${rep[1]}`}>
+                      <strong>{rep[1]}</strong> -  {rep[3]}
+                    </div>
+                  ))
+                )}
+              </div>
+
+              <h3>Senators:</h3>
+              <div>
+                {selectedSenateDistricts.map((senateDistrict) =>
+                  SenatorData.filter((item) => item[0] === senateDistrict).map((senator) => (
+                    <div key={`${senator[0]}-${senator[1]}`}>
+                      <strong>{senator[1]}</strong> -  {senator[2]}
+                    </div>
+                  ))
+                )}
+              </div>
+              <button onClick={handleProceed}>View Legislature Data</button>
+
+            </div>
+          ): (
+            <div className="no-districts">
+              <h2>Welcome to VTBillTracker.org!</h2>
+              <p>This tool is designed to assist Vermont citizens <br/>in tracking the activities of their local legislators.</p>
+              <p>You can highlight your town for easier <br/> selection by using the button above!</p>
+              <p>Select a district on the map to get started.</p>
+            </div>
+          )}
 
         </div>
-      )}
     </div>
+    <div className='selection-town-tool'>
+          
+            <button onClick={() => setShowModal(true)} className='town-tool-button'>Find Your Town</button>
+            <h2 className='town-tool-output'>Highlighted Town: {TownToolSelection || "None"}</h2>
+
+            <TownSelector setShowModal={setShowModal} showModal={showModal} TownToolSelection={TownToolSelection} setTownToolSelection={setTownToolSelection} />
     </div>
-    </div>
+  </div>
+</div>
+<Footer/>
+</>
 
 
   );
 };
+          {/*tooltipVisible && (
+          <div
+            className="tooltip"
+            style={{
+              position: 'absolute',
+              top: tooltipPosition.y + 'px',
+              left: tooltipPosition.x + 'px',
+              background: 'white',
+              padding: '5px',
+              borderRadius: '5px',
+              border: '1px solid black',
+              pointerEvents: 'none', // Ensure it doesn't interfere with map interactions
+              zIndex: 10 // Make sure it's above the map
+            }}
+          >
+            {console.log("Tooltip rendering with content: ", tooltipContent)}
+            {tooltipContent}
+          </div>
+          )*/}
 
 export default Map;

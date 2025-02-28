@@ -126,3 +126,45 @@ button:hover {
 .dark-mode button:hover {
     background: linear-gradient(90deg, #333 0%, #111 100%);
 }
+/* Back button container */
+.back-arrow-container {
+    display: flex; /* Align image and label horizontally */
+    align-items: center; /* Vertically center the elements */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    margin-bottom: 1rem; /* Space below the back button */
+    margin-left: 1rem; /* Optional left alignment */
+    padding-left: 2%;
+    padding-top: 2%;
+  }
+  
+  /* Back button container hover effect */
+  .back-arrow-label:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+  }
+  
+  /* Arrow icon */
+  .back-arrow {
+    width: 2rem; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0.5rem; /* Space between icon and label */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); /* Subtle shadow for depth */
+  }
+  
+  /* Back button label */
+  .back-arrow-label {
+    font-size: 1rem; /* Consistent with the rest of the text */
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(90deg, #0093FF 0%, #005CFF 100%);
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effects */
+  }
+  
+  /* Back button label hover effect */
+  .back-arrow-container:hover .back-arrow-label {
+    background: linear-gradient(90deg, #005CFF 0%, #003B99 100%);
+  }
+  

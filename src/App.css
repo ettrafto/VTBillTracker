@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .card {
+      width: 100%;
+      padding: 1rem;
+  }
+
+  .btn-container {
+      flex-direction: column;
+  }
+
+  .btn-container button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+  }
+
+  .top-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}

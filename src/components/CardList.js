@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
 
+import { StateContext } from '../util/StateProvider';
 
+import Title from "../components/all/Title";
 import "./Card.css";
 import "./CardList.css";
 import Card from "./Card";
@@ -10,23 +12,28 @@ import { RepData } from '../util/RepData';
 import { SenatorData } from '../util/SenatorData';
 
 const CardList = () => {
+  const { selectedDistricts,selectedSenateDistricts} = useContext(StateContext);
 
+
+  const navigate = useNavigate();
 
   const location = useLocation();
-  const { selectedDistricts = [], selectedSenateDistricts = [] } = location.state || {};
   const [selectedReps, setSelectedReps] = useState([]);
   const [selectedSenators, setSelectedSenators] = useState([]);
   const [allNames, setAllNames] = useState([]);
 
   const [data, setData] = useState([]);
-  const [sortOption, setSortOption] = useState("bill_number_asc");
+  const [sortOption, setSortOption] = useState("date_desc");
   const [filteredData, setFilteredData] = useState(data);
   const [allSponsors, setAllSponsors] = useState([]);
-
+  const [detailedSponsors, setDetailedSponsors] = useState([]);
+  const [detailedStatuses, setDetailedStatuses] = useState({});
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [cardsPerRow, setCardsPerRow] = useState(1); // State to control number of cards per row
   const [isDarkMode, setIsDarkMode] = useState(false); // State to manage dark mode
+  const [billCounts, setBillCounts] = useState({});
+
 
 
   const [bills, setBills] = useState([]);
@@ -88,13 +95,29 @@ const CardList = () => {
     return data.filter((bill) => allNames.includes(bill.sponsor_name));
   };
 
-  
 
   useEffect(() => {
     const sortedData = sortData(data);
     const filteredAndSortedData = filterBySponsor(sortedData);
-    setFilteredData(filteredAndSortedData);
-  }, [sortOption, allNames, bills]);
+  
+    // Ensure uniqueness based on bill_number
+    const uniqueBills = Array.from(new Map(filteredAndSortedData.map(bill => [bill.bill_number, bill])).values());
+  
+    // Map sponsors and statuses to the unique bills, ensuring uniqueness
+    const enrichedBills = uniqueBills.map(bill => ({
+      ...bill,
+      sponsors: detailedSponsors[bill.bill_number]
+        ? Array.from(new Set(detailedSponsors[bill.bill_number].map(s => s.sponsor_name))) // Ensure unique sponsors
+        : [],
+      statuses: detailedStatuses[bill.bill_number]
+        ? Array.from(new Map(detailedStatuses[bill.bill_number].map(s => [s.action_status, s])).values()) // Ensure unique statuses
+        : []
+    }));
+  
+    setFilteredData(enrichedBills);
+  }, [sortOption, allNames, bills, detailedSponsors, detailedStatuses]);
+  
+  
 
   const handleSponsorChange = (sponsor) => {
     setAllNames((prev) =>
@@ -115,41 +138,61 @@ const CardList = () => {
   };
 
   const cycleView = () => {
-    setCardsPerRow((prev) => (prev === 3 ? 2 : prev === 2 ? 1 : 3));
+    setCardsPerRow((prev) => (prev === 2 ? 1 : 2));
   };
 /*
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 */
+  const getNumberOfBills = (data) => {
+    const billCounts = {};
+
+    // Iterate through the data and count bills per sponsor
+    data.forEach((bill) => {
+      const sponsor = bill.sponsor_name;
+      if (sponsor) {
+        if (!billCounts[sponsor]) {
+          billCounts[sponsor] = 0;
+        }
+        billCounts[sponsor]++;
+      }
+    });
+
+    return billCounts;
+  };
+
+  useEffect(() => {
+    const counts = getNumberOfBills(data);
+    setBillCounts(counts);
+  }, [data]);
+  
 
   
 //loading data from DB to bills
-  useEffect(() => {
-    const loadDatabase = async () => {
-      try {
-        const SQL = await window.initSqlJs({
-          locateFile: (file) => `/sqljs/${file}`,
-        });
-  
-        const response = await fetch("/backend/database/legislature_data.db");
-        const arrayBuffer = await response.arrayBuffer();
-        const db = new SQL.Database(new Uint8Array(arrayBuffer));
-  
-        // Combine and flatten the arrays of selected reps and senators
-        const repNames = getSelectedReps(selectedDistricts, RepData);
-        const senatorNames = getSelectedSenators(selectedSenateDistricts, SenatorData);
-        setAllNames([...repNames, ...senatorNames]);
+useEffect(() => {
+  const loadDatabase = async () => {
+    try {
+      const SQL = await window.initSqlJs({
+        locateFile: (file) => `/sqljs/${file}`,
+      });
 
-        // Build names placeholder with properly formatted names
-        const namesPlaceholder = [...repNames, ...senatorNames]
+      const response = await fetch("/backend/database/legislature_data.db");
+      const arrayBuffer = await response.arrayBuffer();
+      const db = new SQL.Database(new Uint8Array(arrayBuffer));
+
+      // Combine and flatten the arrays of selected reps and senators
+      const repNames = getSelectedReps(selectedDistricts, RepData);
+      const senatorNames = getSelectedSenators(selectedSenateDistricts, SenatorData);
+      setAllNames([...repNames, ...senatorNames]);
+
+      // Build names placeholder with properly formatted names
+      const namesPlaceholder = [...repNames, ...senatorNames]
         .map((name) => `'${name.replace(/'/g, "''")}'`) // Escape single quotes
         .join(", ");
-        // console.log('names placeholder', namesPlaceholder); // Correctly formatted names
 
-  
-        // Dynamically construct the query
-        const query = `
+      // First query to retrieve the list of bills
+      const query1 = `
         SELECT  
             BILL.bill_number,
             BILL.title,
@@ -181,45 +224,120 @@ const CardList = () => {
             STATUS.status_date, 
             sponsor_name;
       `;
-      
-    
-    //(${namesPlaceholder})
-        //('Angela Arsenault', 'Erin Brady', 'Thomas Chittenden', 'Virginia "Ginny" Lyons', 'Kesha Ram Hinsdale');
-        console.log("Executing query:", query); // Debugging log
-  
-        const result = db.exec(query);
-  
-        if (result.length > 0) {
-          const rows = result[0].values.map((row) =>
-            result[0].columns.reduce((acc, col, i) => {
-              acc[col] = row[i];
-              return acc;
-            }, {})
-          );
-          setBills(rows);
-          console.log('rows', rows);
-          setData(rows);
-        } else {
-          console.log(namesPlaceholder)
-          console.error("No results found");
-          setBills([]);
+
+      const result1 = db.exec(query1);
+
+      if (result1.length > 0) {
+        const bills = result1[0].values.map((row) =>
+          result1[0].columns.reduce((acc, col, i) => {
+            acc[col] = row[i];
+            return acc;
+          }, {})
+        );
+
+        setBills(bills);
+        setData(bills);
+
+        // Run the sponsor and status queries for each bill
+        const detailedSponsors = {};
+        const detailedStatuses = {};
+
+        for (const bill of bills) {
+          const billNumber = bill.bill_number;
+
+          // Query to get all sponsors for the bill
+          const sponsorQuery = `
+            SELECT 
+              SPONSOR.first_name || ' ' || SPONSOR.last_name AS sponsor_name
+            FROM 
+                SPONSORED
+            JOIN 
+                SPONSOR ON SPONSORED.sponsor_id = SPONSOR.id
+            WHERE 
+                SPONSORED.bill_id = '${billNumber}'
+            ORDER BY 
+                SPONSOR.last_name ASC;
+          `;
+
+          // Query to get all statuses for the bill
+          const statusQuery = `
+            SELECT 
+              STATUS.full_status AS action_status,
+              STATUS.status_date AS action_date
+            FROM 
+                STATUS
+            WHERE 
+                STATUS.bill_id = '${billNumber}'
+            ORDER BY 
+                STATUS.status_date DESC;
+          `;
+
+          // Execute sponsor query
+          const sponsorResult = db.exec(sponsorQuery);
+          if (sponsorResult.length > 0) {
+            detailedSponsors[billNumber] = sponsorResult[0].values.map((row) =>
+              sponsorResult[0].columns.reduce((acc, col, i) => {
+                acc[col] = row[i];
+                return acc;
+              }, {})
+            );
+          } else {
+            detailedSponsors[billNumber] = [];
+          }
+
+          // Execute status query
+          const statusResult = db.exec(statusQuery);
+          if (statusResult.length > 0) {
+            detailedStatuses[billNumber] = statusResult[0].values.map((row) =>
+              statusResult[0].columns.reduce((acc, col, i) => {
+                acc[col] = row[i];
+                return acc;
+              }, {})
+            );
+          } else {
+            detailedStatuses[billNumber] = [];
+          }
         }
-      } catch (err) {
-        setError(err.message);
+
+        console.log("Detailed Sponsors for All Bills:", detailedSponsors);
+        console.log("Detailed Statuses for All Bills:", detailedStatuses);
+
+        // Optionally set these to state for further use
+        setDetailedSponsors(detailedSponsors);
+        setDetailedStatuses(detailedStatuses);
+      } else {
+        console.error("No results found for the first query");
+        setBills([]);
       }
-    };
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  loadDatabase();
+}, [selectedReps, selectedSenators]);
+
+
   
-    loadDatabase();
-  }, [selectedReps, selectedSenators]);
-  
+  //navigation back to Map Page with selected districts and senators
+  const handleReSelect = () => {
+    navigate("/", { state: { selectedDistricts, selectedSenateDistricts } });
+  };
   
   return (
   <>
 
     <div className={isDarkMode ? "dark-mode" : ""}> 
+      <Title />
+      
+      <div className="back-arrow-container" onClick={handleReSelect}>
+        <img className='back-arrow'src="/images/arrow-left.svg" alt="Back" />
+        <span className="back-arrow-label">Reselect</span>
+      </div>
+{/* 
       <div className="title">
         <h1>VT Bill Tracker</h1>
-      </div>
+      </div> */}
 
       <div className="sorting-parent">
         <button onClick={() => toggleSortOption("bill_number")}>
@@ -229,7 +347,7 @@ const CardList = () => {
           Sort by Date {sortOption === "date_asc" ? "▲" : "▼"}
         </button>
         <button onClick={toggleDropdown}>Select Sponsors</button>
-        <button onClick={cycleView}>Cycle View</button>
+        <button onClick={cycleView}>Change View</button>
         {/*<button onClick={toggleDarkMode}>
           {isDarkMode ? "Light Mode" : "Dark Mode"}
         </button> */}
@@ -237,22 +355,22 @@ const CardList = () => {
       
 
       {isDropdownOpen && (
-        <div className="dropdown-menu">
-          {allSponsors.map((sponsor) => (
-            <div key={sponsor}>
-              <input
-                type="checkbox"
-                id={`sponsor-${sponsor}`}
-                checked={allNames.includes(sponsor)} // Reflect the selected state
-                onChange={() => handleSponsorChange(sponsor)} // Update the selected state
-              />
-              <label htmlFor={`sponsor-${sponsor}`}>{sponsor}</label>
-            </div>
-          ))}
-        </div>
+      <div className="dropdown-menu">
+        {allSponsors.map((sponsor) => (
+          <div key={sponsor}>
+            <input
+              type="checkbox"
+              id={`sponsor-${sponsor}`}
+              checked={allNames.includes(sponsor)} // Reflect the selected state
+              onChange={() => handleSponsorChange(sponsor)} // Update the selected state
+            />
+            <label htmlFor={`sponsor-${sponsor}`}>
+              {sponsor} ({billCounts[sponsor] || 0} bills)
+            </label>            
+          </div>
+        ))}
+      </div>
       )}
-
-
 
 
       <div className={`cards cards-${cardsPerRow}`}>
@@ -270,6 +388,8 @@ const CardList = () => {
               last_recorded_action_date={bill.status_date}
               full_status={bill.full_status}
               sponsor_name={bill.sponsor_name}
+              sponsors={bill.sponsors}
+              statuses={bill.statuses}
             />
           ))}
         </LayoutGroup>

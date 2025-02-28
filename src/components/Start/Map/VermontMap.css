@@ -21,46 +21,61 @@ h2 {
   z-index: 10; /* Make sure it's above the map */
 }
 
-.selection-container{
+
+.container {
   display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.selection-container {
   flex-direction: row;
   justify-content: center;
   margin-top: 20px;
-}
-
-.selection-map{
-
-
-}
-
-.selected-data-title {
-  text-align: center;
-}
-
-.selected-data-container {
-  width: 40%;
-  padding: 5%;
-}
-.selection-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #f9f9f9;
   border-radius: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 90%;
-  width: 100%;
-  
-  align-items: flex-start;
-  justify-content: flex-start;
+  width: 80%;
 }
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .selection-container {
+    display:flex !important; /* Stack items vertically */
+    flex-direction: column !important; /* Stack items vertically */
+  }
+
+  .selection-map {
+      order: -1 !important; /* Move the map to the top */
+  }
+}
+
+.selected-data-title {
+  text-align: center;
+}
+
+.right-menu{
+  width: 90%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selected-data-container {
+  width: 40%;
+  padding: 5%;
+  height:85%;
+  align-items: flex-start;
+}
+
 
 .selection-map {
   position: relative; /* For tooltip positioning */
   width: 100%;
-  margin-bottom: 2rem;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -80,11 +95,49 @@ svg {
 
 .selected-data-container {
   width: 100%;
-  padding: 2rem;
+  padding: 0rem;
   background-color: #fff;
   border-radius: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left:3%;
+
 }
+.selection-town-tool{
+  align-items: flex-end;
+  margin-top: 1em;
+  margin: 1.5em auto;
+  width:65%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  justify-content: flex-start;
+}
+.town-tool-output{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.town-tool-button{
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  padding:1em;
+  margin: 1em 1em 1em 1em;
+
+}
+
 
 .selected-data-title {
 
@@ -94,17 +147,27 @@ svg {
   text-align: center;
   color: #333;
 }
+.selected-districts {
+  padding-top:.75em;
+  padding-left:4em;
+}
+.selected-districts button {
+  margin: 3em 12em;
+
+}
 
 .selected-districts h2, .selected-districts h3 {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: #555;
+  padding-left: 3em;
 }
 
 .selected-districts div {
   font-size: 1.2rem;
   color: #333;
+  padding-left: 2.5em;
 }
 
 button {
@@ -112,4 +175,155 @@ button {
   font-weight: 600;
   padding: 0.5rem 2rem;
   margin-top: 1rem;
+}
+
+.view-icon{
+  max-width: 3em;
+  margin-bottom:3%;
+}
+.no-districts{
+  padding-top: 1%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3b3b3b;
+}
+
+.zoom-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Button Styling */
+.zoom-buttons button {
+  max-width: 10em;
+  max-height: 4em;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem; /* Slightly larger padding */
+  border-radius: 1rem;
+  background-color: #007bff; /* Nice blue color */
+  color: white; /* White text */
+  border: none; /* Remove default borders */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  margin-bottom:5%;
+}
+
+/* Hover Effect */
+.zoom-buttons button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+/* Active/Click Effect */
+.zoom-buttons button:active {
+  transform: scale(0.98); /* Slight press effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Accessibility & Focus Effect */
+.zoom-buttons button:focus {
+  outline: 3px solid #000; /* Yellow focus outline */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+
+
+  .zoom-buttons {
+    flex-direction: column; /* Stack buttons on mobile */
+  }
+
+  .zoom-buttons button {
+    width: 80%; /* Full-width buttons */
+    max-width: none;
+  }
+  .selected-data-container {
+    margin-left:0%;
+  }
+  .view-icon{
+    max-width: 0em;
+  }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Title Styling */
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex-grow: 1; /* Helps center title */
+}
+
+/* Navigation or Buttons in Header */
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button Styling */
+.header-buttons button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover and Active Effects */
+.header-buttons button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.header-buttons button:active {
+  transform: scale(0.98);
+}
+
+/* 🔹 Mobile View Adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .header-title {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .header-buttons button {
+    width: 80%; /* Full-width buttons for easier tapping */
+    max-width: 200px;
+  }
 }

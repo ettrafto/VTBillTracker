@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 
 import {
   BrowserRouter as Router,
@@ -11,17 +11,22 @@ import './App.css';
 
 import CardList from './components/CardList'
 import Start from './pages/Start'
+import { StateProvider } from './util/StateProvider';
+
+
 
 function App() {
-  //<Map/>
   
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Start/>}/>
-        <Route path='/legislature' element={<CardList/>}/>
-      </Routes>
-    </Router>
+    <StateProvider>
+      <Router>
+        <Routes>
+            <Route path='/' element={<Start/>}/>
+            <Route path='/legislature' element={<CardList/>}/>
+        </Routes>
+      </Router>
+    </StateProvider>
+
   );
 }
 
