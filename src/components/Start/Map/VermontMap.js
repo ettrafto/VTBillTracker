@@ -148,7 +148,7 @@ useEffect(() => {
   };
 
   updateSelectedTowns(); // Call the function to update selectedTowns
-}, [selectedDistricts, RepData]);
+}, [selectedDistricts, RepData, TownToolSelection]);
 
 useEffect(() => {
   const updateSelectedSenatorDistricts = () => {

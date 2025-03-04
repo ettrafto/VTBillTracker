@@ -244,11 +244,12 @@ async function main() {
     console.log("Fetching bill list...");
     const billList = await fetchBillList();
 
-console.log('billList',billList)
+    console.log('billList', billList);
 
     for (const bill of billList.flat()) {
       console.log(`Checking bill: ${bill.BillNumber}`);
-      console.log({bill})
+      console.log({ bill });
+
       const upToDate = await isBillUpToDate(bill.BillNumber, new Date().toISOString());
       if (!upToDate) {
         console.log(`Bill ${bill.BillNumber} is out of date or missing. Fetching details...`);
@@ -260,6 +261,10 @@ console.log('billList',billList)
       } else {
         console.log(`Bill ${bill.BillNumber} is up to date.`);
       }
+
+      // **Add a 5-second delay before making the next API request**
+      console.log(`Waiting 5 seconds before the next request...`);
+      await new Promise(resolve => setTimeout(resolve, 5000));
     }
 
     console.log("Database update complete.");
@@ -268,6 +273,7 @@ console.log('billList',billList)
   } finally {
   }
 }
+
 
 // Run the main function
 main();

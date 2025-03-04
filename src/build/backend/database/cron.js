@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+//shebang line 
+
 
 //check if any new bills
     //curl bill/list -> array of bills
@@ -17,6 +20,7 @@
         // Array of scripts to run
         const scripts = [
           './check-bill.js',
+          './check-status.js'
         ];
         
         // Function to execute a script
