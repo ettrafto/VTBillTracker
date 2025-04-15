@@ -22,28 +22,28 @@
     };
 
     // Log request details for debugging
-    console.log("Request URL:", url);
-    console.log("Request Headers:", headers);
+    //console.log("Request URL:", url);
+    //console.log("Request Headers:", headers);
 
     return fetch(url, { headers })
       .then(response => {
-        console.log("Response Status:", response.status, response.statusText);
+        //console.log("Response Status:", response.status, response.statusText);
         if (!response.ok) {
           // Attempt to parse the error body for debugging
           return response.json().then(err => {
-            console.error("Response Error:", err);
+            //console.error("Response Error:", err);
             return null;
           });
         }
         return response.json();
       })
       .then(data => {
-        console.log("Raw Response Data:", data);
+        //console.log("Raw Response Data:", data);
         // We expect data.bills to be an array with a single bill object
         return data && data.bills ? data.bills[0] : null;
       })
       .catch(error => {
-        console.error(`Error fetching bill with ID ${billId}:`, error);
+        //console.error(`Error fetching bill with ID ${billId}:`, error);
         return null;
       });
   }
@@ -57,18 +57,18 @@
         // 2. For each bill, fetch all statuses from the API
         for (const billRow of billsInDB) {
             const { bill_number } = billRow;
-            console.log(`\nChecking statuses for Bill: ${bill_number}`);
+            //console.log(`\nChecking statuses for Bill: ${bill_number}`);
 
             // 2a. Fetch the full Bill data from the API
             const fullBillData = await fetchSingleBill(bill_number);
             if (!fullBillData) {
-                console.log(`No data returned from API for Bill ${bill_number}. Skipping...`);
+                //console.log(`No data returned from API for Bill ${bill_number}. Skipping...`);
                 continue;
             }
 
             const statuses = fullBillData.StatusHistory || [];
             if (statuses.length === 0) {
-                console.log(`No statuses found from API for Bill ${bill_number}.`);
+                //console.log(`No statuses found from API for Bill ${bill_number}.`);
                 continue;
             }
 
@@ -79,13 +79,13 @@
             await updateLastRecordedAction(db, bill_number);
 
             // ** Add a delay of 5 seconds before the next API request **
-            console.log(`Waiting 5 seconds before the next request...`);
+            //console.log(`Waiting 5 seconds before the next request...`);
             await new Promise(resolve => setTimeout(resolve, 5000));
         }
 
-        console.log("\nStatus update script complete.");
+        //console.log("\nStatus update script complete.");
     } catch (err) {
-        console.error("Error in main() function:", err);
+        //console.error("Error in main() function:", err);
     } finally {
         db.close();
     }
@@ -159,16 +159,16 @@
                 ],
                 (err2) => {
                   if (err2) {
-                    console.error(`Error inserting status: ${err2.message}`);
+                    //console.error(`Error inserting status: ${err2.message}`);
                   } else {
-                    console.log(`Inserted new status for bill ${billNumber}: ${status.FullStatus}`);
+                    //console.log(`Inserted new status for bill ${billNumber}: ${status.FullStatus}`);
                   }
                   decrementCount();
                 }
               );
             } else {
               // Already exists
-              console.log(`Status already exists for bill ${billNumber}: ${status.FullStatus}`);
+              //console.log(`Status already exists for bill ${billNumber}: ${status.FullStatus}`);
               decrementCount();
             }
           });
@@ -199,12 +199,12 @@
         [billNumber],
         (err, row) => {
           if (err) {
-            console.error(`Error fetching latest status for ${billNumber}: ${err.message}`);
+            //console.error(`Error fetching latest status for ${billNumber}: ${err.message}`);
             return reject(err);
           }
           if (!row) {
             // No statuses
-            console.warn(`No statuses found for ${billNumber}. Cannot update last_recorded_action_id.`);
+            //console.warn(`No statuses found for ${billNumber}. Cannot update last_recorded_action_id.`);
             return resolve();
           }
 
@@ -220,10 +220,10 @@
             [id, newUpdated, billNumber],
             (err2) => {
               if (err2) {
-                console.error(`Error updating Bill table for ${billNumber}: ${err2.message}`);
+                //console.error(`Error updating Bill table for ${billNumber}: ${err2.message}`);
                 return reject(err2);
               }
-              console.log(`Updated last_recorded_action_id for Bill ${billNumber} to status: ${full_status}`);
+              //console.log(`Updated last_recorded_action_id for Bill ${billNumber} to status: ${full_status}`);
               resolve();
             }
           );
