@@ -1,0 +1,1047 @@
+2024/12/27 14:01:01 [info] 645791#645791 discovery started
+2024/12/27 14:01:01 [notice] 645791#645791 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2024/12/27 14:01:01 [notice] 645791#645791 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2024/12/27 14:01:01 [notice] 645791#645791 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2024/12/27 14:01:01 [notice] 645791#645791 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2024/12/27 14:01:01 [notice] 645791#645791 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2024/12/27 14:01:01 [notice] 645791#645791 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2024/12/27 14:01:01 [notice] 645791#645791 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2024/12/27 14:01:01 [notice] 645791#645791 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2024/12/27 14:01:01 [notice] 645791#645791 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2024/12/27 14:01:01 [info] 645790#645790 controller started
+2024/12/27 14:01:01 [notice] 645790#645790 process 645791 exited with code 0
+2024/12/27 14:01:01 [info] 645804#645804 router started
+2024/12/27 14:01:01 [info] 645804#645804 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/01/14 02:30:10 [notice] 645790#645790 process 645803 exited with code 0
+2025/01/14 02:30:10 [notice] 645790#645790 process 645804 exited with code 0
+2025/01/14 02:30:36 [info] 1108#1108 discovery started
+2025/01/14 02:30:36 [notice] 1108#1108 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/01/14 02:30:36 [notice] 1108#1108 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/01/14 02:30:36 [notice] 1108#1108 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/01/14 02:30:36 [notice] 1108#1108 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/01/14 02:30:36 [notice] 1108#1108 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/01/14 02:30:36 [notice] 1108#1108 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/01/14 02:30:36 [notice] 1108#1108 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/01/14 02:30:36 [notice] 1108#1108 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/01/14 02:30:36 [notice] 1108#1108 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/01/14 02:30:36 [info] 1103#1103 controller started
+2025/01/14 02:30:36 [info] 1196#1196 router started
+2025/01/14 02:30:36 [info] 1196#1196 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/01/14 02:30:36 [notice] 1103#1103 process 1108 exited with code 0
+2025/01/17 15:49:43 [info] 999710#999710 "cns_w3_uvm_edu" prototype started
+2025/01/17 15:49:43 [info] 999711#999711 "cns_w3_uvm_edu" application started
+(node:999711) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/01/21 15:59:08 [info] 2752133#2752133 "cns_w3_uvm_edu" prototype started
+2025/01/21 15:59:08 [info] 2752135#2752135 "cns_w3_uvm_edu" application started
+(node:2752135) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+/users/c/n/cns/www-root/vt-legislature/src/index.js:1
+import React from 'react';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:76:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1283:20)
+    at Module._compile (node:internal/modules/cjs/loader:1328:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+    at Module._load (node:internal/modules/cjs/loader:1019:12)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:203:29)
+    at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+
+Node.js v18.20.4
+2025/01/21 15:59:08 [notice] 2752133#2752133 app process 2752135 exited with code 1
+2025/01/21 15:59:08 [warn] 1196#1196 failed to start application "cns_w3_uvm_edu"
+2025/01/21 15:59:08 [alert] 1196#1196 failed to apply new conf
+2025/01/21 15:59:08 [notice] 1103#1103 process 2752133 exited with code 0
+2025/01/21 16:16:08 [info] 2770242#2770242 "cns_w3_uvm_edu" prototype started
+2025/01/21 16:16:08 [info] 2770243#2770243 "cns_w3_uvm_edu" application started
+(node:2770243) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/01/21 16:16:08 [alert] 999710#999710 sendmsg(15, -1, -1, 1) failed (32: Broken pipe)
+2025/01/21 16:16:08 [notice] 999710#999710 app process 999711 exited with code 0
+2025/01/21 16:16:08 [notice] 1103#1103 process 999710 exited with code 0
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+2025/01/21 16:17:17 [info] 2770457#2770457 "cns_w3_uvm_edu" prototype started
+2025/01/21 16:17:17 [info] 2770458#2770458 "cns_w3_uvm_edu" application started
+(node:2770458) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/01/21 16:17:17 [notice] 2770242#2770242 app process 2770243 exited with code 0
+2025/01/21 16:17:17 [notice] 1103#1103 process 2770242 exited with code 0
+2025/01/23 00:46:52 [info] 639651#639651 "cns_w3_uvm_edu" prototype started
+2025/01/23 00:46:52 [info] 639652#639652 "cns_w3_uvm_edu" application started
+(node:639652) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/01/23 00:46:52 [notice] 2770457#2770457 app process 2770458 exited with code 0
+2025/01/23 00:46:52 [notice] 1103#1103 process 2770457 exited with code 0
+2025/01/23 00:47:24 [info] 639684#639684 "cns_w3_uvm_edu" prototype started
+2025/01/23 00:47:24 [info] 639685#639685 "cns_w3_uvm_edu" application started
+(node:639685) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/01/23 00:47:25 [alert] 639651#639651 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/01/23 00:47:25 [notice] 639651#639651 app process 639652 exited with code 0
+2025/01/23 00:47:25 [notice] 1103#1103 process 639651 exited with code 0
+2025/01/23 00:48:50 [info] 640788#640788 "cns_w3_uvm_edu" prototype started
+2025/01/23 00:48:50 [info] 640789#640789 "cns_w3_uvm_edu" application started
+(node:640789) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/01/23 00:48:51 [notice] 639684#639684 app process 639685 exited with code 0
+2025/01/23 00:48:51 [notice] 1103#1103 process 639684 exited with code 0
+2025/01/23 00:50:06 [info] 643853#643853 "cns_w3_uvm_edu" prototype started
+2025/01/23 00:50:06 [info] 643854#643854 "cns_w3_uvm_edu" application started
+(node:643854) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:internal/modules/cjs/loader:1140
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /users/c/n/cns/www-root/vt-legislature1/app.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+    at Module.require (node:internal/modules/cjs/loader:1231:19)
+    at Module.require (/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.js:24:29)
+    at require (node:internal/modules/helpers:177:18)
+    at Object.<anonymous> (/users/c/n/cns/www-root/vt-legislature1/app.js:1:17)
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+    at Module._load (node:internal/modules/cjs/loader:1019:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/users/c/n/cns/www-root/vt-legislature1/app.js' ]
+}
+
+Node.js v18.20.4
+2025/01/23 00:50:06 [notice] 643853#643853 app process 643854 exited with code 1
+2025/01/23 00:50:06 [warn] 1196#1196 failed to start application "cns_w3_uvm_edu"
+2025/01/23 00:50:06 [alert] 1196#1196 failed to apply new conf
+2025/01/23 00:50:06 [notice] 1103#1103 process 643853 exited with code 0
+2025/01/28 02:26:05 [notice] 640788#640788 signal signo:15 (SIGTERM) received
+2025/01/28 02:26:05 [notice] 1103#1103 process 1195 exited with code 0
+2025/01/28 02:26:05 [alert] 640788#640788 app process 640789 exited on signal 15
+2025/01/28 02:26:05 [alert] 640788#640788 sendmsg(16, -1, -1, 2) failed (32: Broken pipe)
+2025/01/28 02:26:05 [notice] 1103#1103 process 640788 exited with code 0
+2025/01/28 02:26:05 [notice] 1103#1103 process 1196 exited with code 0
+2025/01/28 02:26:32 [info] 1156#1156 discovery started
+2025/01/28 02:26:32 [notice] 1156#1156 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/01/28 02:26:32 [notice] 1156#1156 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/01/28 02:26:32 [notice] 1156#1156 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/01/28 02:26:32 [notice] 1156#1156 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/01/28 02:26:32 [notice] 1156#1156 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/01/28 02:26:32 [notice] 1156#1156 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/01/28 02:26:32 [notice] 1156#1156 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/01/28 02:26:32 [notice] 1156#1156 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/01/28 02:26:32 [notice] 1156#1156 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/01/28 02:26:32 [info] 1155#1155 controller started
+2025/01/28 02:26:32 [notice] 1155#1155 process 1156 exited with code 0
+2025/01/28 02:26:32 [info] 1246#1246 router started
+2025/01/28 02:26:32 [info] 1246#1246 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/01/28 02:26:32 [info] 1250#1250 "cns_w3_uvm_edu" prototype started
+2025/01/28 02:26:32 [info] 1252#1252 "cns_w3_uvm_edu" application started
+(node:1252) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/06 12:39:45 [info] 2167759#2167759 "cns_w3_uvm_edu" prototype started
+2025/02/06 12:39:45 [info] 2167760#2167760 "cns_w3_uvm_edu" application started
+(node:2167760) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/06 12:39:46 [notice] 1250#1250 app process 1252 exited with code 0
+2025/02/06 12:39:46 [notice] 1155#1155 process 1250 exited with code 0
+2025/02/06 12:40:15 [info] 2171306#2171306 "cns_w3_uvm_edu" prototype started
+2025/02/06 12:40:15 [info] 2171307#2171307 "cns_w3_uvm_edu" application started
+(node:2171307) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/06 12:40:15 [alert] 2167759#2167759 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/02/06 12:40:15 [notice] 2167759#2167759 app process 2167760 exited with code 0
+2025/02/06 12:40:15 [notice] 1155#1155 process 2167759 exited with code 0
+2025/02/06 12:42:40 [info] 2172874#2172874 "cns_w3_uvm_edu" prototype started
+2025/02/06 12:42:40 [info] 2172875#2172875 "cns_w3_uvm_edu" application started
+(node:2172875) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/06 12:42:40 [notice] 2171306#2171306 app process 2171307 exited with code 0
+2025/02/06 12:42:40 [notice] 1155#1155 process 2171306 exited with code 0
+2025/02/11 02:11:29 [notice] 2172874#2172874 signal signo:15 (SIGTERM) received
+2025/02/11 02:11:29 [alert] 2172874#2172874 app process 2172875 exited on signal 15
+2025/02/11 02:11:29 [alert] 1155#1155 sendmsg(14, -1, -1, 1) failed (32: Broken pipe)
+2025/02/11 02:11:29 [notice] 1155#1155 process 2172874 exited with code 0
+2025/02/11 02:11:29 [notice] 1155#1155 process 1245 exited with code 0
+2025/02/11 02:11:29 [notice] 1155#1155 process 1246 exited with code 0
+2025/02/11 02:11:56 [info] 1160#1160 discovery started
+2025/02/11 02:11:56 [notice] 1160#1160 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/02/11 02:11:56 [notice] 1160#1160 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/02/11 02:11:56 [notice] 1160#1160 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/02/11 02:11:56 [notice] 1160#1160 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/02/11 02:11:56 [notice] 1160#1160 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/02/11 02:11:56 [notice] 1160#1160 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/02/11 02:11:56 [notice] 1160#1160 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/02/11 02:11:56 [notice] 1160#1160 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/02/11 02:11:56 [notice] 1160#1160 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/02/11 02:11:57 [info] 1155#1155 controller started
+2025/02/11 02:11:57 [notice] 1155#1155 process 1160 exited with code 0
+2025/02/11 02:11:57 [info] 1322#1322 router started
+2025/02/11 02:11:57 [info] 1322#1322 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/02/11 02:11:57 [info] 1335#1335 "cns_w3_uvm_edu" prototype started
+2025/02/11 02:11:57 [info] 1337#1337 "cns_w3_uvm_edu" application started
+(node:1337) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/13 13:42:40 [info] 3812505#3812505 "cns_w3_uvm_edu" prototype started
+2025/02/13 13:42:40 [info] 3812506#3812506 "cns_w3_uvm_edu" application started
+(node:3812506) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/13 13:42:40 [alert] 1335#1335 sendmsg(15, -1, -1, 1) failed (32: Broken pipe)
+2025/02/13 13:42:41 [notice] 1335#1335 app process 1337 exited with code 0
+2025/02/13 13:42:41 [notice] 1155#1155 process 1335 exited with code 0
+2025/02/13 13:43:48 [info] 3812967#3812967 "cns_w3_uvm_edu" prototype started
+2025/02/13 13:43:48 [info] 3812968#3812968 "cns_w3_uvm_edu" application started
+(node:3812968) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/13 13:43:49 [notice] 3812505#3812505 app process 3812506 exited with code 0
+2025/02/13 13:43:49 [notice] 1155#1155 process 3812505 exited with code 0
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+2025/02/13 14:01:07 [info] 3835760#3835760 "cns_w3_uvm_edu" prototype started
+2025/02/13 14:01:07 [info] 3835761#3835761 "cns_w3_uvm_edu" application started
+(node:3835761) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/13 14:01:07 [notice] 3812967#3812967 app process 3812968 exited with code 0
+2025/02/13 14:01:07 [notice] 1155#1155 process 3812967 exited with code 0
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+2025/02/13 14:22:25 [info] 3860762#3860762 "vtbilltracker_org" prototype started
+2025/02/13 14:22:25 [info] 3860763#3860763 "vtbilltracker_org" application started
+(node:3860763) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/14 23:28:32 [info] 1322#1864 *1156 send(46, 7F633EB5E000, 65536) failed (104: Connection reset by peer)
+2025/02/18 02:07:39 [notice] 3860762#3860762 signal signo:15 (SIGTERM) received
+2025/02/18 02:07:39 [notice] 3835760#3835760 signal signo:15 (SIGTERM) received
+2025/02/18 02:07:39 [alert] 1155#1155 sendmsg(16, -1, -1, 1) failed (32: Broken pipe)
+2025/02/18 02:07:39 [alert] 3835760#3835760 app process 3835761 exited on signal 15
+2025/02/18 02:07:39 [alert] 3835760#3835760 sendmsg(16, -1, -1, 2) failed (32: Broken pipe)
+2025/02/18 02:07:39 [alert] 3860762#3860762 app process 3860763 exited on signal 15
+2025/02/18 02:07:39 [alert] 3860762#3860762 sendmsg(16, -1, -1, 2) failed (32: Broken pipe)
+2025/02/18 02:07:39 [notice] 1155#1155 process 3860762 exited with code 0
+2025/02/18 02:07:39 [notice] 1155#1155 process 1321 exited with code 0
+2025/02/18 02:07:39 [notice] 1155#1155 process 1322 exited with code 0
+2025/02/18 02:07:39 [notice] 1155#1155 process 3835760 exited with code 0
+2025/02/18 02:08:06 [info] 1153#1153 discovery started
+2025/02/18 02:08:06 [notice] 1153#1153 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/02/18 02:08:06 [notice] 1153#1153 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/02/18 02:08:06 [notice] 1153#1153 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/02/18 02:08:06 [notice] 1153#1153 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/02/18 02:08:06 [notice] 1153#1153 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/02/18 02:08:06 [notice] 1153#1153 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/02/18 02:08:06 [notice] 1153#1153 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/02/18 02:08:06 [notice] 1153#1153 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/02/18 02:08:06 [notice] 1153#1153 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/02/18 02:08:06 [info] 1152#1152 controller started
+2025/02/18 02:08:06 [notice] 1152#1152 process 1153 exited with code 0
+2025/02/18 02:08:06 [info] 1266#1266 router started
+2025/02/18 02:08:06 [info] 1266#1266 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/02/18 02:08:07 [info] 1288#1288 "cns_w3_uvm_edu" prototype started
+2025/02/18 02:08:07 [info] 1289#1289 "cns_w3_uvm_edu" application started
+(node:1289) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/18 02:08:08 [info] 1786#1786 "vtbilltracker_org" prototype started
+2025/02/18 02:08:08 [info] 1790#1790 "vtbilltracker_org" application started
+(node:1790) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/20 18:31:51 [info] 1266#1903 *249 send(45, 7F7B03600000, 65536) failed (32: Broken pipe)
+2025/02/25 02:16:11 [notice] 1288#1288 signal signo:15 (SIGTERM) received
+2025/02/25 02:16:11 [notice] 1786#1786 signal signo:15 (SIGTERM) received
+2025/02/25 02:16:11 [alert] 1288#1288 app process 1289 exited on signal 15
+2025/02/25 02:16:11 [alert] 1786#1786 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/02/25 02:16:11 [alert] 1786#1786 app process 1790 exited on signal 15
+2025/02/25 02:16:11 [alert] 1152#1152 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/02/25 02:16:11 [alert] 1786#1786 sendmsg(16, -1, -1, 2) failed (32: Broken pipe)
+2025/02/25 02:16:11 [alert] 1288#1288 sendmsg(16, -1, -1, 2) failed (104: Connection reset by peer)
+2025/02/25 02:16:12 [notice] 1152#1152 process 1265 exited with code 0
+2025/02/25 02:16:12 [notice] 1152#1152 process 1266 exited with code 0
+2025/02/25 02:16:12 [notice] 1152#1152 process 1288 exited with code 0
+2025/02/25 02:16:12 [notice] 1152#1152 process 1786 exited with code 0
+2025/02/25 02:18:02 [info] 1146#1146 discovery started
+2025/02/25 02:18:02 [notice] 1146#1146 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/02/25 02:18:02 [notice] 1146#1146 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/02/25 02:18:02 [notice] 1146#1146 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/02/25 02:18:02 [notice] 1146#1146 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/02/25 02:18:02 [notice] 1146#1146 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/02/25 02:18:02 [notice] 1146#1146 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/02/25 02:18:02 [notice] 1146#1146 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/02/25 02:18:02 [notice] 1146#1146 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/02/25 02:18:02 [notice] 1146#1146 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/02/25 02:18:03 [info] 1143#1143 controller started
+2025/02/25 02:18:03 [notice] 1143#1143 process 1146 exited with code 0
+2025/02/25 02:18:03 [info] 1290#1290 router started
+2025/02/25 02:18:03 [info] 1290#1290 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/02/25 02:18:03 [info] 1312#1312 "cns_w3_uvm_edu" prototype started
+2025/02/25 02:18:03 [info] 1317#1317 "cns_w3_uvm_edu" application started
+(node:1317) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/02/25 02:18:04 [info] 1860#1860 "vtbilltracker_org" prototype started
+2025/02/25 02:18:04 [info] 1861#1861 "vtbilltracker_org" application started
+(node:1861) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/03/03 14:55:37 [info] 2122693#2122693 "cns_w3_uvm_edu" prototype started
+2025/03/03 14:55:37 [info] 2122694#2122694 "cns_w3_uvm_edu" application started
+(node:2122694) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/03/03 14:55:37 [notice] 1312#1312 app process 1317 exited with code 0
+2025/03/03 14:55:38 [notice] 1143#1143 process 1312 exited with code 0
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+2025/03/11 02:11:13 [notice] 1860#1860 signal signo:15 (SIGTERM) received
+2025/03/11 02:11:13 [notice] 2122693#2122693 signal signo:15 (SIGTERM) received
+2025/03/11 02:11:13 [alert] 1860#1860 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/03/11 02:11:13 [alert] 1860#1860 app process 1861 exited on signal 15
+2025/03/11 02:11:13 [notice] 1143#1143 process 1289 exited with code 0
+2025/03/11 02:11:13 [notice] 1143#1143 process 1860 exited with code 0
+2025/03/11 02:11:13 [alert] 2122693#2122693 app process 2122694 exited on signal 15
+2025/03/11 02:11:13 [alert] 2122693#2122693 sendmsg(16, -1, -1, 2) failed (104: Connection reset by peer)
+2025/03/11 02:11:13 [notice] 1143#1143 process 1290 exited with code 0
+2025/03/11 02:11:13 [notice] 1143#1143 process 2122693 exited with code 0
+2025/03/11 02:11:41 [info] 1195#1195 discovery started
+2025/03/11 02:11:41 [notice] 1195#1195 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/03/11 02:11:41 [notice] 1195#1195 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/03/11 02:11:41 [notice] 1195#1195 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/03/11 02:11:41 [notice] 1195#1195 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/03/11 02:11:41 [notice] 1195#1195 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/03/11 02:11:41 [notice] 1195#1195 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/03/11 02:11:41 [notice] 1195#1195 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/03/11 02:11:41 [notice] 1195#1195 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/03/11 02:11:41 [notice] 1195#1195 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/03/11 02:11:41 [info] 1192#1192 controller started
+2025/03/11 02:11:41 [notice] 1192#1192 process 1195 exited with code 0
+2025/03/11 02:11:41 [info] 1284#1284 router started
+2025/03/11 02:11:41 [info] 1284#1284 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/03/11 02:11:41 [info] 1300#1300 "cns_w3_uvm_edu" prototype started
+2025/03/11 02:11:41 [info] 1304#1304 "cns_w3_uvm_edu" application started
+(node:1304) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/03/11 02:11:43 [info] 1840#1840 "vtbilltracker_org" prototype started
+2025/03/11 02:11:43 [info] 1841#1841 "vtbilltracker_org" application started
+(node:1841) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+2025/03/17 23:24:45 [alert] 1840#1840 app process 1841 exited on signal 11 (core dumped)
+2025/03/17 23:24:45 [info] 2730179#2730179 "vtbilltracker_org" application started
+(node:2730179) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+2025/03/18 02:18:13 [notice] 1840#1840 signal signo:15 (SIGTERM) received
+2025/03/18 02:18:13 [alert] 1192#1192 sendmsg(16, -1, -1, 1) failed (32: Broken pipe)
+2025/03/18 02:18:13 [notice] 1300#1300 signal signo:15 (SIGTERM) received
+2025/03/18 02:18:13 [alert] 1840#1840 app process 2730179 exited on signal 15
+2025/03/18 02:18:13 [alert] 1840#1840 sendmsg(16, -1, -1, 2) failed (32: Broken pipe)
+2025/03/18 02:18:13 [notice] 1192#1192 process 1283 exited with code 0
+2025/03/18 02:18:13 [alert] 1300#1300 app process 1304 exited on signal 15
+2025/03/18 02:18:13 [notice] 1192#1192 process 1840 exited with code 0
+2025/03/18 02:18:13 [alert] 1300#1300 sendmsg(16, -1, -1, 2) failed (32: Broken pipe)
+2025/03/18 02:18:13 [notice] 1192#1192 process 1300 exited with code 0
+2025/03/18 02:18:13 [notice] 1192#1192 process 1284 exited with code 0
+2025/03/18 02:20:05 [info] 1165#1165 discovery started
+2025/03/18 02:20:05 [notice] 1165#1165 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/03/18 02:20:05 [notice] 1165#1165 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/03/18 02:20:05 [notice] 1165#1165 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/03/18 02:20:05 [notice] 1165#1165 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/03/18 02:20:05 [notice] 1165#1165 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/03/18 02:20:05 [notice] 1165#1165 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/03/18 02:20:05 [notice] 1165#1165 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/03/18 02:20:05 [notice] 1165#1165 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/03/18 02:20:05 [notice] 1165#1165 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/03/18 02:20:05 [info] 1163#1163 controller started
+2025/03/18 02:20:05 [notice] 1163#1163 process 1165 exited with code 0
+2025/03/18 02:20:05 [info] 1276#1276 router started
+2025/03/18 02:20:05 [info] 1276#1276 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/03/18 02:20:06 [info] 1303#1303 "cns_w3_uvm_edu" prototype started
+2025/03/18 02:20:06 [info] 1305#1305 "cns_w3_uvm_edu" application started
+(node:1305) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/03/18 02:20:07 [info] 1865#1865 "vtbilltracker_org" prototype started
+2025/03/18 02:20:07 [info] 1866#1866 "vtbilltracker_org" application started
+(node:1866) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+2025/03/23 13:48:48 [alert] 1865#1865 app process 1866 exited on signal 11 (core dumped)
+2025/03/23 13:48:48 [info] 245668#245668 "vtbilltracker_org" application started
+(node:245668) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+2025/03/25 02:19:05 [notice] 1865#1865 signal signo:15 (SIGTERM) received
+2025/03/25 02:19:05 [notice] 1303#1303 signal signo:15 (SIGTERM) received
+2025/03/25 02:19:05 [alert] 1303#1303 sendmsg(15, -1, -1, 1) failed (32: Broken pipe)
+2025/03/25 02:19:05 [alert] 1303#1303 app process 1305 exited on signal 15
+2025/03/25 02:19:05 [notice] 1163#1163 process 1276 exited with code 0
+2025/03/25 02:19:05 [notice] 1163#1163 process 1303 exited with code 0
+2025/03/25 02:19:05 [notice] 1163#1163 process 1275 exited with code 0
+2025/03/25 02:19:05 [alert] 1865#1865 app process 245668 exited on signal 15
+2025/03/25 02:19:05 [alert] 1865#1865 sendmsg(16, -1, -1, 2) failed (104: Connection reset by peer)
+2025/03/25 02:19:05 [notice] 1163#1163 process 1865 exited with code 0
+2025/03/25 02:19:29 [info] 1279#1279 discovery started
+2025/03/25 02:19:29 [notice] 1279#1279 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/03/25 02:19:29 [notice] 1279#1279 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/03/25 02:19:29 [notice] 1279#1279 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/03/25 02:19:29 [notice] 1279#1279 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/03/25 02:19:29 [notice] 1279#1279 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/03/25 02:19:29 [notice] 1279#1279 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/03/25 02:19:29 [notice] 1279#1279 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/03/25 02:19:29 [notice] 1279#1279 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/03/25 02:19:29 [notice] 1279#1279 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/03/25 02:19:29 [info] 1276#1276 controller started
+2025/03/25 02:19:29 [notice] 1276#1276 process 1279 exited with code 0
+2025/03/25 02:19:29 [info] 1470#1470 router started
+2025/03/25 02:19:29 [info] 1470#1470 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/03/25 02:19:29 [info] 1496#1496 "cns_w3_uvm_edu" prototype started
+2025/03/25 02:19:29 [info] 1499#1499 "cns_w3_uvm_edu" application started
+(node:1499) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/03/25 02:19:31 [info] 2110#2110 "vtbilltracker_org" prototype started
+2025/03/25 02:19:31 [info] 2111#2111 "vtbilltracker_org" application started
+(node:2111) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+2025/04/01 02:08:12 [notice] 2110#2110 signal signo:15 (SIGTERM) received
+2025/04/01 02:08:12 [notice] 1496#1496 signal signo:15 (SIGTERM) received
+2025/04/01 02:08:12 [alert] 2110#2110 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/04/01 02:08:12 [alert] 2110#2110 app process 2111 exited on signal 15
+2025/04/01 02:08:12 [alert] 1496#1496 app process 1499 exited on signal 15
+2025/04/01 02:08:12 [alert] 1276#1276 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/04/01 02:08:12 [alert] 2110#2110 sendmsg(16, -1, -1, 2) failed (104: Connection reset by peer)
+2025/04/01 02:08:12 [alert] 1496#1496 sendmsg(16, -1, -1, 2) failed (32: Broken pipe)
+2025/04/01 02:08:12 [notice] 1276#1276 process 1469 exited with code 0
+2025/04/01 02:08:12 [notice] 1276#1276 process 1496 exited with code 0
+2025/04/01 02:08:12 [notice] 1276#1276 process 2110 exited with code 0
+2025/04/01 02:08:12 [notice] 1276#1276 process 1470 exited with code 0
+2025/04/01 02:08:43 [info] 1261#1261 discovery started
+2025/04/01 02:08:43 [notice] 1261#1261 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/04/01 02:08:43 [notice] 1261#1261 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/04/01 02:08:43 [notice] 1261#1261 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/04/01 02:08:43 [notice] 1261#1261 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/04/01 02:08:43 [notice] 1261#1261 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/04/01 02:08:43 [notice] 1261#1261 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/04/01 02:08:43 [notice] 1261#1261 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/04/01 02:08:43 [notice] 1261#1261 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/04/01 02:08:43 [notice] 1261#1261 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/04/01 02:08:43 [info] 1258#1258 controller started
+2025/04/01 02:08:43 [notice] 1258#1258 process 1261 exited with code 0
+2025/04/01 02:08:43 [info] 1436#1436 router started
+2025/04/01 02:08:43 [info] 1436#1436 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/04/01 02:08:43 [info] 1457#1457 "cns_w3_uvm_edu" prototype started
+2025/04/01 02:08:43 [info] 1460#1460 "cns_w3_uvm_edu" application started
+(node:1460) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/04/01 02:08:45 [info] 2143#2143 "vtbilltracker_org" prototype started
+2025/04/01 02:08:45 [info] 2145#2145 "vtbilltracker_org" application started
+(node:2145) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+2025/04/08 02:19:16 [notice] 2143#2143 signal signo:15 (SIGTERM) received
+2025/04/08 02:19:16 [notice] 1457#1457 signal signo:15 (SIGTERM) received
+2025/04/08 02:19:16 [alert] 2143#2143 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/04/08 02:19:16 [alert] 2143#2143 app process 2145 exited on signal 15
+2025/04/08 02:19:16 [alert] 1457#1457 app process 1460 exited on signal 15
+2025/04/08 02:19:16 [alert] 1258#1258 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/04/08 02:19:16 [alert] 2143#2143 sendmsg(16, -1, -1, 2) failed (104: Connection reset by peer)
+2025/04/08 02:19:16 [alert] 1457#1457 sendmsg(16, -1, -1, 2) failed (32: Broken pipe)
+2025/04/08 02:19:16 [notice] 1258#1258 process 1434 exited with code 0
+2025/04/08 02:19:16 [notice] 1258#1258 process 1457 exited with code 0
+2025/04/08 02:19:16 [notice] 1258#1258 process 2143 exited with code 0
+2025/04/08 02:19:16 [notice] 1258#1258 process 1436 exited with code 0
+2025/04/08 02:19:40 [info] 1274#1274 discovery started
+2025/04/08 02:19:40 [notice] 1274#1274 module: java 11.0.23 "/opt/nginx-unit/1.33.0/lib/unit/modules/java11.unit.so"
+2025/04/08 02:19:40 [notice] 1274#1274 module: java 17.0.12 "/opt/nginx-unit/1.33.0/lib/unit/modules/java17.unit.so"
+2025/04/08 02:19:40 [notice] 1274#1274 module: java 21.0.3 "/opt/nginx-unit/1.33.0/lib/unit/modules/java21.unit.so"
+2025/04/08 02:19:40 [notice] 1274#1274 module: python 3.10.15 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.10.unit.so"
+2025/04/08 02:19:40 [notice] 1274#1274 module: python 3.12.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.12.unit.so"
+2025/04/08 02:19:40 [notice] 1274#1274 module: python 3.8.20 "/opt/nginx-unit/1.33.0/lib/unit/modules/python3.8.unit.so"
+2025/04/08 02:19:40 [notice] 1274#1274 module: ruby 3.1.6 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.1.unit.so"
+2025/04/08 02:19:40 [notice] 1274#1274 module: ruby 3.2.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.2.unit.so"
+2025/04/08 02:19:40 [notice] 1274#1274 module: ruby 3.3.5 "/opt/nginx-unit/1.33.0/lib/unit/modules/ruby3.3.unit.so"
+2025/04/08 02:19:41 [info] 1273#1273 controller started
+2025/04/08 02:19:41 [notice] 1273#1273 process 1274 exited with code 0
+2025/04/08 02:19:41 [info] 1496#1496 router started
+2025/04/08 02:19:41 [info] 1496#1496 OpenSSL 3.2.2 4 Jun 2024, 30200020
+2025/04/08 02:19:41 [info] 1531#1531 "cns_w3_uvm_edu" prototype started
+2025/04/08 02:19:41 [info] 1533#1533 "cns_w3_uvm_edu" application started
+(node:1533) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/04/08 02:19:42 [info] 2157#2157 "vtbilltracker_org" prototype started
+2025/04/08 02:19:42 [info] 2158#2158 "vtbilltracker_org" application started
+(node:2158) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Running script: ./check-bill.js
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Running script: ./check-bill.js
+2025/04/09 16:41:07 [info] 2541365#2541365 "cns_w3_uvm_edu" prototype started
+2025/04/09 16:41:07 [info] 2541366#2541366 "cns_w3_uvm_edu" application started
+(node:2541366) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/04/09 16:41:08 [notice] 1531#1531 app process 1533 exited with code 0
+2025/04/09 16:41:08 [notice] 1273#1273 process 1531 exited with code 0
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+2025/04/09 16:45:09 [info] 2544953#2544953 "cns_w3_uvm_edu" prototype started
+2025/04/09 16:45:09 [info] 2544954#2544954 "cns_w3_uvm_edu" application started
+(node:2544954) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/04/09 16:45:09 [notice] 2541365#2541365 app process 2541366 exited with code 0
+2025/04/09 16:45:09 [notice] 1273#1273 process 2541365 exited with code 0
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+2025/04/09 16:47:17 [info] 2546263#2546263 "cns_w3_uvm_edu" prototype started
+2025/04/09 16:47:17 [info] 2546264#2546264 "cns_w3_uvm_edu" application started
+(node:2546264) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/04/09 16:47:17 [notice] 2544953#2544953 app process 2544954 exited with code 0
+2025/04/09 16:47:17 [notice] 1273#1273 process 2544953 exited with code 0
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+Error: ENOENT: no such file or directory, stat '/users/c/n/cns/www-root/vt-legislature/src/build/index.html'
+2025/04/09 16:49:47 [info] 2548703#2548703 "cns_w3_uvm_edu" prototype started
+2025/04/09 16:49:47 [info] 2548704#2548704 "cns_w3_uvm_edu" application started
+(node:2548704) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("/opt/nginx-unit/nodejs/18/node_modules/unit-http/loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+2025/04/09 16:49:47 [alert] 2546263#2546263 sendmsg(13, -1, -1, 1) failed (32: Broken pipe)
+2025/04/09 16:49:47 [notice] 2546263#2546263 app process 2546264 exited with code 0
+2025/04/09 16:49:47 [notice] 1273#1273 process 2546263 exited with code 0
+Running script: ./check-bill.js
+/bin/sh: line 1: opt/mise/installs/node/18.20.4/bin/node: No such file or directory

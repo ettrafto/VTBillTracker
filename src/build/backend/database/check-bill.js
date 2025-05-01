@@ -17,27 +17,27 @@ function fetchBillList() {
       "Authorization": "Bearer 21dd2a54151e46e484dd2694a0778e99"
     };
 
-  console.log("Request URL and Headers:", url, headers); // Debugging request
+  //console.log("Request URL and Headers:", url, headers); // Debugging request
 
   return fetch(url, { headers })
     .then(response => {
-      console.log("Response Status:", response.status, response.statusText); // Debugging response
+      //console.log("Response Status:", response.status, response.statusText); // Debugging response
       if (!response.ok) {
         return response.json().then(err => {
-          console.error("Response Error:", err);
+          //console.error("Response Error:", err);
           return [];
         });
       }
       return response.json();
     })
     .then(data => {
-      console.log("Raw Response Data:", data);
+      //console.log("Raw Response Data:", data);
       const billsArray = data.bills || [];
       //console.log("Fetched Bills Array:", billsArray);
       return billsArray;
     })
     .catch(error => {
-      console.error("Error fetching bill list:", error);
+      //console.error("Error fetching bill list:", error);
       return [];
     });
 
@@ -61,7 +61,7 @@ function fetchSingleBill(billId) {
       return data.bills[0];
     })
     .catch(error => {
-      console.error(`Error fetching bill with ID ${billId}:`, error);
+      //console.error(`Error fetching bill with ID ${billId}:`, error);
       return null; // Return null in case of an error
     });
 }
@@ -85,7 +85,7 @@ function isBillUpToDate(billNumber, lastUpdated) {
 async function insertOrUpdateBill(billData) {
     return new Promise((resolve, reject) => {
       const lastUpdated = new Date().toISOString();
-      console.log("Bill Data:", JSON.stringify(billData, null, 2)); // Debug bill data
+      //console.log("Bill Data:", JSON.stringify(billData, null, 2)); // Debug bill data
   
       db.run(
         `INSERT INTO BILL (bill_number, date_introduced, passed, title, type, vetoed, last_updated)
@@ -108,7 +108,7 @@ async function insertOrUpdateBill(billData) {
         ],
         function (err) {
           if (err) {
-            console.error("Error inserting/updating bill:", err.message);
+            //console.error("Error inserting/updating bill:", err.message);
             return reject(err);
           }
   
@@ -130,7 +130,7 @@ async function insertOrUpdateBill(billData) {
             ],
             (err, row) => {
             if (err) {
-                console.error(`Error checking existing status: ${err.message}`);
+                //console.error(`Error checking existing status: ${err.message}`);
                 return;
             }
 
@@ -148,14 +148,14 @@ async function insertOrUpdateBill(billData) {
                 ],
                 (err) => {
                     if (err) {
-                    console.error(`Error inserting status: ${err.message}`);
+                    //console.error(`Error inserting status: ${err.message}`);
                     } else {
-                    console.log(`Inserted new status for bill ${billId}: ${status.FullStatus}`);
+                    //console.log(`Inserted new status for bill ${billId}: ${status.FullStatus}`);
                     }
                 }
                 );
             } else {
-                console.log(`Status already exists for bill ${billId}: ${status.FullStatus}`);
+                //console.log(`Status already exists for bill ${billId}: ${status.FullStatus}`);
             }
             }
         );
@@ -173,7 +173,7 @@ sponsors.forEach((sponsor) => {
               ],
     (err, row) => {
       if (err) {
-        console.error(`Error finding sponsor: ${err.message}`);
+        //console.error(`Error finding sponsor: ${err.message}`);
         return;
       }
       if (row) {
@@ -182,10 +182,10 @@ sponsors.forEach((sponsor) => {
            VALUES (?, ?, ?)`,
           [billId, row.id, sponsor.SponsorType || null],
           (err) => {
-                      if (err)
-              console.error(
+              if (err);
+              /*console.error(
                 `Error inserting into SPONSORED table: ${err.message}`
-              );
+              );*/
             }
         );
       }
@@ -199,9 +199,9 @@ sponsors.forEach((sponsor) => {
             [billId],
             (err, row) => {
             if (err) {
-                console.error(
+                /*console.error(
                 `Error fetching most recent status for bill ${billId}: ${err.message}`
-                );
+                );*/
                 return reject(err);
             }
         
@@ -211,21 +211,21 @@ sponsors.forEach((sponsor) => {
                     [row.id, lastUpdated, billData.BillNumber],
                     (err) => {
                         if (err) {
-                        console.error(
+                        /*console.error(
                             `Error updating last recorded action for bill ${billId}: ${err.message}`
-                        );
+                        );*/
                         return reject(err);
                         }
-                        console.log(
+                        /* console.log(
                         `Updated last recorded action for bill ${billId} with status: ${row.full_status}`
-                        );
+                        ); */
                         resolve();
                 }
                 );
             } else {
-                console.warn(
+                /* console.warn(
                 `No statuses found for bill ${billId}, skipping last recorded action update.`
-                );
+                ); */
                 resolve();
             }
             }
@@ -241,35 +241,35 @@ sponsors.forEach((sponsor) => {
 // Main function to check for updates and insert new data
 async function main() {
   try {
-    console.log("Fetching bill list...");
+    //console.log("Fetching bill list...");
     const billList = await fetchBillList();
 
-    console.log('billList', billList);
+    //console.log('billList', billList);
 
     for (const bill of billList.flat()) {
-      console.log(`Checking bill: ${bill.BillNumber}`);
-      console.log({ bill });
+      //console.log(`Checking bill: ${bill.BillNumber}`);
+      //console.log({ bill });
 
       const upToDate = await isBillUpToDate(bill.BillNumber, new Date().toISOString());
       if (!upToDate) {
-        console.log(`Bill ${bill.BillNumber} is out of date or missing. Fetching details...`);
+        //console.log(`Bill ${bill.BillNumber} is out of date or missing. Fetching details...`);
         const fullBillData = await fetchSingleBill(bill.BillNumber);
         if (fullBillData) {
           await insertOrUpdateBill(fullBillData);
-          console.log(`Bill ${bill.BillNumber} updated.`);
+          //console.log(`Bill ${bill.BillNumber} updated.`);
         }
       } else {
-        console.log(`Bill ${bill.BillNumber} is up to date.`);
+        //console.log(`Bill ${bill.BillNumber} is up to date.`);
       }
 
       // **Add a 5-second delay before making the next API request**
-      console.log(`Waiting 5 seconds before the next request...`);
+      //console.log(`Waiting 5 seconds before the next request...`);
       await new Promise(resolve => setTimeout(resolve, 5000));
     }
 
     console.log("Database update complete.");
   } catch (err) {
-    console.error("Error during update:", err);
+    //console.error("Error during update:", err);
   } finally {
   }
 }
@@ -299,9 +299,9 @@ main().then(() => {
     [new Date().toISOString()],
     (err) => {
       if (err) {
-        console.error("Error updating last recorded action for all bills:", err.message);
+        //console.error("Error updating last recorded action for all bills:", err.message);
       } else {
-        console.log("Successfully updated last recorded actions for all bills.");
+        //console.log("Successfully updated last recorded actions for all bills.");
       }
     }
   );
