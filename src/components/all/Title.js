@@ -11,7 +11,7 @@ const Title = () => {
         <div className='header-container'>
             <div className='title-container'>
                     <img src='/images/vermont-icon.png' alt='Vermont' className='vermont-icon'/>
-                <h1 className='title'>VTBillChecker.org</h1>
+                <h1 className='title'>VTBillTracker.org</h1>
             </div>
 
             <div className="sponsor-container">
