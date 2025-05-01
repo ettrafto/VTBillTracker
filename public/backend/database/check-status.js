@@ -1,3 +1,5 @@
+import API_KEY from './SECRET.js'; // Import the API key from the SECRET.js file
+
 (async () => {
   const sqlite3 = require('sqlite3').verbose();
   // If you need `node-fetch` in Node 18+, you can remove the await import line below,
@@ -6,7 +8,6 @@
 
   // --- CONFIG ---
   const API_BASE_URL = "https://legislature.vermont.gov/api/v1";
-  const API_KEY = "21dd2a54151e46e484dd2694a0778e99"; 
 
   // --- OPEN DB ---
   const db = new sqlite3.Database('./legislature_data.db');

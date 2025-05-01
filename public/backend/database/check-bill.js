@@ -1,10 +1,12 @@
+import API_KEY from './SECRET.js'; // Import the API key from the SECRET.js file
+
+
 (async () => {
     //const fetch = (await import('node-fetch')).default;
     const sqlite3 = require('sqlite3').verbose();
 
 // API Details
 const API_BASE_URL = "https://legislature.vermont.gov/api/v1";
-const API_KEY = "21dd2a54151e46e484dd2694a0778e99"; // Keep this key secure
 
 // Open SQLite database
 const db = new sqlite3.Database('./legislature_data.db');
